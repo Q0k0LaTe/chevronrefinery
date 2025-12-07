@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Richmond + Chevron Timeline</h1>
+    <p class="lead">A century of industry, migration, and environmental justice activism condensed into key moments.</p>
+
+    <div class="grid-2">
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="timeline-date">1900–1940</span>
+                <h3>Industrial Entry</h3>
+                <p>Standard Oil opens the refinery (1902) and builds rail and tank infrastructure along the shoreline.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">1940–1970</span>
+                <h3>WWII & Migration</h3>
+                <p>Shipyard jobs bring Black southerners and Asian refugees; wartime housing clusters near the refinery.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">1970–2000</span>
+                <h3>Environmental Justice Emerges</h3>
+                <p>Federal Clean Air Act rules meet local organizing; early lawsuits challenge refinery emissions and accidents.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">2000–2020</span>
+                <h3>Political Power Shift</h3>
+                <p>Chevron bankrolls city elections while the Richmond Progressive Alliance wins council seats; 2012 fire triggers medical surge and settlements.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-date">2020–Present</span>
+                <h3>Climate Futures</h3>
+                <p>Sea-level rise threatens toxic sites; AB 617 monitoring expands; community push for just transition grows.</p>
+            </div>
+        </div>
+        <div>
+            <img src="/static/timeline/Richmond-Shipyards.jpg" alt="Richmond shipyards historical photo">
+            <small>Wartime shipbuilding tied Richmond’s housing and labor force to refinery growth.</small>
+            <br><br>
+            <img src="/static/timeline/about-history-historic-photo-of-el-segundo-refinery-1160x400.jpg" alt="Historic refinery operations">
+            <br><br>
+            <img src="/static/timeline/s-l1200.png" alt="Aerial industrial view">
+        </div>
+    </div>
+</div>
+{% endblock %}

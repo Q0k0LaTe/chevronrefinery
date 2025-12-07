@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Unequal Breath</h1>
+    <p class="lead">ER visits, asthma inhalers, and chronic coughs cluster right next to the refinery fence line—mirroring the pollution plume and historic redlining boundaries.</p>
+    <br>
+    
+    <div class="grid-3">
+        <div class="stat-box">
+            <span class="stat-number">2x</span>
+            <p>Higher childhood asthma rate than the county average.</p>
+        </div>
+        <div class="stat-box">
+            <span class="stat-number">95%</span>
+            <p>CalEnviroScreen Pollution Burden Percentile.</p>
+        </div>
+        <div class="stat-box">
+            <span class="stat-number">15k</span>
+            <p>Residents sought aid after the 2012 fire.</p>
+        </div>
+    </div>
+
+    <br><br>
+    
+    <div class="grid-2">
+        <div class="card">
+            <h3>Health Indicators</h3>
+            <ul>
+                <li><strong>Asthma ER visits:</strong> Spike in 94801 and 94804 ZIP codes.</li>
+                <li><strong>Respiratory illness:</strong> Elevated hospitalizations after major flaring events.</li>
+                <li><strong>Cancer risk:</strong> Higher benzene exposure near the rail corridor.</li>
+            </ul>
+            <br>
+            <h3>Key Pollutants</h3>
+            <ul>
+                <li><strong>PM2.5:</strong> Penetrates deep into lungs and bloodstream.</li>
+                <li><strong>Benzene:</strong> Carcinogenic; spikes during flares.</li>
+                <li><strong>SO<sub>2</sub>:</strong> Triggers respiratory distress.</li>
+            </ul>
+        </div>
+        <img src="/static/health/Asthma-Emergency-Department-Visits.jpg" alt="Asthma ER visits chart for Contra Costa">
+    </div>
+
+    <div class="grid-2">
+        <img src="/static/health/maxresdefault.jpg" alt="Chevron flare above Richmond">
+        <div class="card">
+            <h3>Community Testimonies</h3>
+            <p>Residents report metallic tastes, burning throats, and chronic headaches during flare days. APEN organizers collect these stories to push regulators for stronger continuous monitoring and faster public alerts.</p>
+            <p><strong>Sources:</strong> Contra Costa Health, CalEnviroScreen 4.0, resident interviews.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Chevron Refinery History</h1>
+    <p class="lead">From its 1902 origins as Standard Oil to the 2012 fire, the Richmond refinery has expanded, flared, and reshaped the shoreline—and the lives of neighbors downwind.</p>
+
+    <div class="grid-2">
+        <img src="/static/history/1906_standardoil.jpg" alt="Early Standard Oil refinery">
+        <div class="card">
+            <h3>Industrial Roots</h3>
+            <p>Built in 1902 to refine crude arriving by tanker and rail, the plant grew during World Wars I and II. Housing for workers was sited nearby—foreshadowing the fence-line neighborhoods of today.</p>
+            <ul>
+                <li><strong>1902:</strong> Standard Oil opens the Richmond refinery.</li>
+                <li><strong>1940s:</strong> WWII shipyard boom demands more fuel; capacity expands.</li>
+                <li><strong>1980s–2000s:</strong> Regulatory fights over emissions and safety upgrades.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="margin: 2rem 0;">
+        <img src="/static/history/RR-HISTORY-P-1227_965x598.jpg" alt="Chevron refinery historic operations">
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <span class="timeline-date">1902</span>
+            <h3>Standard Oil Arrives</h3>
+            <p>Refinery begins operating along the Richmond shoreline, anchoring heavy industry next to working-class housing.</p>
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-date">1940s</span>
+            <h3>Wartime Expansion</h3>
+            <p>WWII shipbuilding brings rapid population growth; Richmond adds wartime housing close to refinery stacks and rail spurs.</p>
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-date">1980s–2000s</span>
+            <h3>Regulation & Violations</h3>
+            <p>Community lawsuits and Bay Area Air Quality Management District (BAAQMD) fines challenge repeated flaring and safety lapses.</p>
+        </div>
+        <div class="timeline-item">
+            <span class="timeline-date">2012</span>
+            <h3>Vapor Cloud Fire</h3>
+            <p>A corroded pipe ruptures, sending 15,000 residents for medical care and spurring a surge in environmental justice organizing.</p>
+        </div>
+    </div>
+
+    <div class="grid-2">
+        <div class="card">
+            <h3>Key Pollutants</h3>
+            <ul>
+                <li><strong>PM2.5 & NO<sub>x</sub>:</strong> Everyday combustion and flaring.</li>
+                <li><strong>Benzene:</strong> Carcinogenic emissions from leaks and flares.</li>
+                <li><strong>SO<sub>x</sub> & heavy metals:</strong> Threaten respiratory and cardiovascular health.</li>
+            </ul>
+            <br>
+            <h3>Violations & Fines</h3>
+            <p>EPA settlements and BAAQMD enforcement actions repeatedly cite Chevron for flare events, toxic releases, and delayed notifications to residents.</p>
+        </div>
+        <img src="/static/history/chevron_vapor_cloud_0111.jpg" alt="Chevron vapor cloud incident">
+    </div>
+</div>
+{% endblock %}

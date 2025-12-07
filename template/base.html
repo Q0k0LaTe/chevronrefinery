@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxic Legacies: Richmond</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">TOXIC LEGACIES</div>
+        <ul class="nav-links">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/segregation-redlining">SEGREGATION</a></li>
+            <li><a href="/chevron-history">HISTORY</a></li>
+            <li><a href="/health-impacts">HEALTH</a></li>
+            <li><a href="/community-resistance">RESISTANCE</a></li>
+            <li><a href="/maps">MAPS</a></li>
+            <li><a href="/timeline">TIMELINE</a></li>
+            <li><a href="/voices">VOICES</a></li>
+            <li><a href="/policies">POLICIES</a></li>
+            <li><a href="/resources">RESOURCES</a></li>
+            <li><a href="/on-campus-resources">CAMPUS</a></li>
+            <li><a href="/methods">METHODS</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2025 Toxic Legacies of the Bay | UC Berkeley</p>
+        <p>Data Sources: CalEnviroScreen 4.0, Mapping Inequality, BAAQMD.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Further Reading & Organizations</h1>
+    <p class="lead">Stay plugged into the Environmental Justice movement in Richmond and beyond.</p>
+
+    <div class="grid-2">
+        <div class="card">
+            <h3>Local EJ Organizations</h3>
+            <ul>
+                <li><strong>APEN:</strong> Laotian and Asian American community organizing in Richmond.</li>
+                <li><strong>Richmond Progressive Alliance:</strong> Corporate-free local political coalition.</li>
+                <li><strong>Communities for a Better Environment:</strong> Litigation, youth organizing, and air monitoring.</li>
+            </ul>
+            <br>
+            <h3>Government Tools</h3>
+            <ul>
+                <li>CalEnviroScreen 4.0 (CA Office of Environmental Health Hazard Assessment)</li>
+                <li>EPA EJScreen and ECHO violation database</li>
+                <li>BAAQMD refinery emissions dashboards</li>
+            </ul>
+        </div>
+        <div>
+            <img src="/static/resources/CalEnviroScreen-1-912x1024.png" alt="CalEnviroScreen map preview">
+            <small>CalEnviroScreen showing cumulative pollution burden in Richmond.</small>
+        </div>
+    </div>
+
+    <div class="grid-2">
+        <div>
+            <img src="/static/resources/epa-ejscreen-800x450-feature.jpg" alt="EPA EJScreen preview">
+        </div>
+        <div class="card">
+            <h3>Academic & Community Reports</h3>
+            <ul>
+                <li>Asian Pacific Environmental Network reports on refinery impacts.</li>
+                <li>Pastor et al. on environmental justice frameworks.</li>
+                <li>Contra Costa Health Department air quality and asthma data.</li>
+                <li>UC Berkeley research labs focused on climate and equity.</li>
+            </ul>
+            <p style="margin-top: 1rem;">Use these readings alongside your annotated bibliography to ground policy recommendations.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

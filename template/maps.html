@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container" style="padding-top: 2rem;">
+    <h1>Interactive Data</h1>
+    <p class="lead">Explore the overlap between historical redlining and modern pollution.</p>
+</div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin="anonymous">
+<div id="local-map" class="leaflet-map"></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin="anonymous"></script>
+<script>
+    const map = L.map('local-map', { scrollWheelZoom: false }).setView([37.935, -122.37], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const colorByType = (type) => {
+        if (type === 'pollution') return '#ff4500';
+        if (type === 'community') return '#4a6fa5';
+        if (type === 'history') return '#ffcc00';
+        return '#ffffff';
+    };
+
+    fetch('/static/maps/local.geojson')
+        .then((resp) => resp.json())
+        .then((geojson) => {
+            L.geoJSON(geojson, {
+                pointToLayer: (feature, latlng) => {
+                    const fill = colorByType(feature.properties.type);
+                    return L.circleMarker(latlng, {
+                        radius: 9,
+                        color: fill,
+                        fillColor: fill,
+                        fillOpacity: 0.9,
+                        weight: 2
+                    });
+                },
+                onEachFeature: (feature, layer) => {
+                    const { name, description, type } = feature.properties;
+                    layer.bindPopup(`<strong>${name}</strong><br><em>${type}</em><br>${description}`);
+                }
+            }).addTo(map);
+        });
+</script>
+
+<div class="container">
+    <div class="grid-2">
+        <div class="card">
+            <h3>Segregation Overlay</h3>
+            <p>Overlay HOLC grades on top of present-day demographic and pollution layers to show how hazardous labels still mirror asthma hot spots.</p>
+            <img src="/static/maps/BD895E0C-C1D8-427B-9716-024128B2CC6F.webp" alt="HOLC overlay preview" style="margin-top: 1rem;">
+        </div>
+        <div class="card">
+            <h3>Pollution Plume</h3>
+            <p>PM2.5 and ozone plumes radiate downwind from the refinery. Mini-maps can toggle between refinery emissions, truck corridors, and rail lines.</p>
+            <img src="/static/maps/changeO3.webp" alt="Ozone change preview" style="margin-top: 1rem;">
+        </div>
+    </div>
+    <div class="card" style="margin-top: 2rem;">
+        <h3>Demographics + Toxic Sites</h3>
+        <p>Combine refinery buffers with census race/ethnicity data to visualize who bears the highest cumulative burden.</p>
+        <img src="/static/maps/94cb3c37303e5b2c7389dee3e65c7160_c15280.jpeg" alt="Demographic burden map" style="margin-top: 1rem;">
+    </div>
+    <div class="card">
+        <h3>Methods</h3>
+        <p>Data sources: EPA ECHO violations, BAAQMD Rule 6-5 inventory, CalEnviroScreen 4.0, and Mapping Inequality HOLC georectified tiles.</p>
+    </div>
+</div>
+{% endblock %}

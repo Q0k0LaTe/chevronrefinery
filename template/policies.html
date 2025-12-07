@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Regulatory Policies</h1>
+    <p class="lead">State and regional rules are supposed to keep refinery pollution in check. Community pressure determines whether they work.</p>
+
+    <div class="grid-2">
+        <div class="card">
+            <h3>California Air Resources Board (CARB)</h3>
+            <p>Sets statewide refinery emissions standards and mobile source rules. CARB’s climate policies push for lower sulfur fuels and flaring reductions.</p>
+        </div>
+        <img src="/static/policies/Refining-Basics.avif" alt="Refining basics diagram">
+    </div>
+
+    <div class="grid-2">
+        <div>
+            <img src="/static/policies/BAAQMD_EmissionsIndex.png" alt="BAAQMD emissions chart">
+        </div>
+        <div class="card">
+            <h3>BAAQMD</h3>
+            <p>Bay Area Air Quality Management District enforces Rule 6-5 (particulate matter) and levies fines for flare events and reporting delays.</p>
+            <ul>
+                <li><strong>Where it struggles:</strong> Slow enforcement, industry lobbying.</li>
+                <li><strong>Where it works:</strong> Community testimony has tightened particulate caps.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid-2">
+        <div class="card">
+            <h3>AB 617</h3>
+            <p>State law funding community air monitoring and emission reduction plans in overburdened neighborhoods like Richmond.</p>
+            <p><strong>Opportunity:</strong> Fence-line sensors + public dashboards make pollution spikes harder to ignore.</p>
+        </div>
+        <img src="/static/policies/AB617.4a146e1bbbeda5b5be11.png" alt="AB617 program graphic">
+    </div>
+</div>
+{% endblock %}

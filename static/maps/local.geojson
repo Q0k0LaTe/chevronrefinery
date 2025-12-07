@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chevron Richmond Refinery",
+        "type": "pollution",
+        "description": "Major refinery; source of flaring incidents and 2012 vapor cloud fire."
+      },
+      "geometry": { "type": "Point", "coordinates": [-122.377, 37.925] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "North Richmond",
+        "type": "community",
+        "description": "Fence-line neighborhood shaped by redlining and wartime housing."
+      },
+      "geometry": { "type": "Point", "coordinates": [-122.368, 37.958] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Iron Triangle",
+        "type": "community",
+        "description": "Dense residential area between rail lines; asthma rates above county averages."
+      },
+      "geometry": { "type": "Point", "coordinates": [-122.351, 37.935] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Richmond Shipyards",
+        "type": "history",
+        "description": "WWII shipbuilding boom linked housing to refinery growth."
+      },
+      "geometry": { "type": "Point", "coordinates": [-122.354, 37.915] }
+    }
+  ]
+}

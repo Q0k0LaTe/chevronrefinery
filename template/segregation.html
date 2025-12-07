@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Redlining & Segregation</h1>
+    <p class="lead">Mapping Inequality’s 1937 survey steered Black, Asian, and Latino families toward the very land zoned for heavy industry—laying the groundwork for today’s refinery fence-line neighborhoods.</p>
+
+    <div class="grid-2">
+        <div>
+            <span class="timeline-date">HOLC Map</span>
+            <h3>Hazardous by Design</h3>
+            <p>Federal Home Owners' Loan Corporation (HOLC) graders painted north and west Richmond in red—“hazardous”—explicitly citing “proximity to Standard Oil.” Those ratings suppressed investment while legitimizing toxic land uses.</p>
+            <ul>
+                <li><strong>A–B zones:</strong> Farther from industry; reserved for white homeowners.</li>
+                <li><strong>C–D zones:</strong> Adjacent to refineries and rail; open to Black and Asian families.</li>
+            </ul>
+        </div>
+        <div>
+            <img src="/static/segregation/decatur.jpg" alt="HOLC graded map of Richmond">
+            <small>1937 HOLC survey card labeling the refinery edge as “hazardous.”</small>
+        </div>
+    </div>
+    
+    <div class="grid-2">
+        <div>
+            <img src="/static/segregation/OaklandBerkeleyHOLCmap-MED-1.jpg" alt="Bay Area HOLC overview">
+            <small>Bay Area HOLC sheet showing the red band along the industrial shoreline.</small>
+        </div>
+        <div>
+            <span class="timeline-date">Segregated Geographies</span>
+            <h3>How Segregation Happened</h3>
+            <p>Restrictive covenants, racially filtered realtors, and wartime public housing funneled Black shipyard workers and Asian refugees into North Richmond. Zoning kept the densest housing closest to rail spurs and refinery stacks.</p>
+            <div class="card">
+                <h4>Why It Matters Today</h4>
+                <p>Current asthma and cancer risks still follow these boundaries—proving that historical maps still predict modern health outcomes.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

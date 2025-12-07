@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero" style="background-image: url('/static/homepage/RR_Richmond-Aerial_0208_1200x690.jpg');">
+    <div class="hero-content">
+        <h1>THE REFINERY NEXT DOOR</h1>
+        <p>Richmond’s refinery corridor sits on top of a century of redlining, zoning, and community resistance.</p>
+        <br>
+        <a href="/maps" style="background: var(--flare-orange); color: white; padding: 12px 24px; font-weight: bold;">EXPLORE THE MAPS</a>
+    </div>
+</section>
+
+<div class="container">
+    <p class="lead">This site walks through three pillars of environmental racism in Richmond, CA: how segregation placed families next to Chevron, how pollution harms health, and how neighbors built an environmental justice movement.</p>
+    <br>
+    <div class="grid-3">
+        <a href="/segregation-redlining" class="card">
+            <h3>Segregation</h3>
+            <p>How 1930s redlining maps trapped Black and Asian communities in the path of pollution.</p>
+        </a>
+        <a href="/health-impacts" class="card">
+            <h3>Pollution</h3>
+            <p>Analyzing the health impacts of PM2.5 and Benzene on the Iron Triangle and North Richmond.</p>
+        </a>
+        <a href="/community-resistance" class="card">
+            <h3>Resistance</h3>
+            <p>From the Laotian organizing of APEN to the Richmond Progressive Alliance.</p>
+        </a>
+    </div>
+</div>
+{% endblock %}

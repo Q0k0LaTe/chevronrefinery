@@ -1,0 +1,163 @@
+/* --- TOXIC LEGACIES DESIGN SYSTEM --- */
+:root {
+    --oil-black: #121212;       /* Primary Background */
+    --charcoal: #1e1e1e;        /* Card Backgrounds */
+    --smog-grey: #e0e0e0;       /* Primary Text */
+    --flare-orange: #ff4500;    /* Action/Alert Color */
+    --warning-yellow: #ffcc00;  /* Secondary Accent */
+    --bay-blue: #4a6fa5;        /* Muted Blue */
+    --white: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--oil-black);
+    color: var(--smog-grey);
+    line-height: 1.6;
+}
+.lead { font-size: 1.1rem; color: var(--smog-grey); max-width: 960px; }
+.leaflet-map { height: 70vh; border: 2px solid var(--charcoal); border-radius: 6px; overflow: hidden; }
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+img { max-width: 100%; display: block; border-radius: 4px; }
+
+/* --- NAVIGATION --- */
+nav {
+    background: var(--charcoal);
+    border-bottom: 3px solid var(--flare-orange);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { 
+    font-weight: 800; 
+    font-size: 1.5rem; 
+    color: var(--flare-orange); 
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-links a { font-size: 0.9rem; font-weight: 600; }
+.nav-links a:hover { color: var(--flare-orange); }
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+.hero::after {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(18,18,18,0.3), var(--oil-black));
+}
+.hero-content { position: relative; z-index: 2; max-width: 800px; padding: 0 20px; }
+.hero-content h1 { 
+    font-size: 3.5rem; 
+    text-shadow: 2px 2px 4px black; 
+    border-bottom: 4px solid var(--flare-orange);
+    display: inline-block;
+}
+
+/* --- LAYOUT UTILITIES --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* --- CARDS & BOXES --- */
+.card {
+    background: var(--charcoal);
+    padding: 2rem;
+    border-left: 4px solid var(--flare-orange);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.card:hover { transform: translateY(-5px); transition: 0.3s; }
+
+.stat-box {
+    text-align: center;
+    border: 1px solid var(--flare-orange);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+.stat-number { font-size: 3rem; font-weight: 800; color: var(--flare-orange); display: block; }
+
+/* --- TIMELINE --- */
+.timeline { position: relative; max-width: 800px; margin: 0 auto; }
+.timeline-item {
+    background: var(--charcoal);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--bay-blue);
+    position: relative;
+}
+.timeline-date {
+    background: var(--flare-orange);
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- MAP EMBED --- */
+.map-frame {
+    width: 100%;
+    height: 80vh;
+    border: 2px solid var(--charcoal);
+    filter: invert(90%) hue-rotate(180deg); /* Optional: Makes light maps look dark mode */
+}
+
+/* --- FOOTER --- */
+footer {
+    background: black;
+    text-align: center;
+    padding: 3rem;
+    margin-top: 4rem;
+    border-top: 1px solid #333;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .hero-content h1 { font-size: 2rem; }
+}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Methods & Credits</h1>
+    <p class="lead">How this project gathered data, selected visuals, and documented environmental justice stories in Richmond.</p>
+
+    <div class="grid-2">
+        <div class="card">
+            <h3>Research Approach</h3>
+            <ul>
+                <li>Mapped HOLC redlining layers against current demographic data.</li>
+                <li>Compiled refinery incidents from EPA ECHO and BAAQMD enforcement records.</li>
+                <li>Summarized peer-reviewed studies and community reports on health impacts.</li>
+            </ul>
+            <p style="margin-top: 1rem;"><strong>Data sources:</strong> CalEnviroScreen 4.0, Mapping Inequality, Contra Costa Health, EPA, BAAQMD.</p>
+        </div>
+        <img src="/static/methods/Richmond_Shipyard_No._3_(Richmond,_CA).jpg" alt="Richmond shipyard archival photo">
+    </div>
+
+    <div class="grid-2">
+        <div>
+            <img src="/static/methods/RKsr5Hicu5mVUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw7KSXH1c7csioxKDEnzySjNMkqqyEsrSzGvCsh2y0lJi8oODIk0Tw8pzQ9IN_UIMCnJVSsGAJ4cJ2M" alt="Design process sketch">
+        </div>
+        <div class="card">
+            <h3>Image Credits</h3>
+            <p>All images are locally hosted from project folders. Sources include Chevron history archives, Mapping Inequality, CalEnviroScreen, APEN, and Contra Costa Health visualizations.</p>
+            <h3 style="margin-top: 1rem;">Generative AI Use</h3>
+            <p>This site used AI assistance only for coding layout and writing copy—no AI-generated images or datasets.</p>
+            <h3 style="margin-top: 1rem;">Credits</h3>
+            <p>Site author: Terrence Han for ESPM 50. Mentors and community partners: Richmond organizers and UC Berkeley faculty cited in the project description.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
